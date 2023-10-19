@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    color: #fff;
+    background: #471a17;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 40px;
+    background: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header a:hover,
+.navbar a:hover,
+.navbar .active {
+    color: #000000;
+    transition: .5s;
+}
+
+.logo {
+    position: relative;
+    font-size: 40px;
+    font-weight: 550;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 50px;
+}
+
+.navbar {
+    padding-right: 40px;
+}
+
+.navbar a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.header .logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #471a17;
+    animation: showRight 1s ease forwards;
+    animation-delay: .6s;
+    z-index: 2;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    margin: 0 25%;
+}
+
+.text-content {
+    max-width: 10000px;
+}
+
+.text-content h1 {
+    position: relative;
+    font-size: 70px;
+    font-weight: 555;
+}
+
+
+
+.text-content h2 {
+    position: relative;
+    font-size: 42px;
+    font-weight: 520;
+}
+
+.text-content p{
+    position: relative;
+    font-size: 28px;
+    font-weight: 520;
+}
+
+.text-content h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #471a17;
+    animation: showTop 1s ease forwards;
+    animation-delay: .4s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.text-content h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #471a17;
+    animation: showTop 1s ease forwards;
+    animation-delay: .6s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+
+.text-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #471a17;
+    animation: showTop 1s ease forwards;
+    animation-delay: .10s;
+    z-index: 2;
+    overflow: hidden;
+}
+
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes showTop {
+    100% {
+        height: 0;
+    }
+}
+
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+}
